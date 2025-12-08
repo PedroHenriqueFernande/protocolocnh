@@ -1,4 +1,5 @@
-import { Check, Star } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Check, Star, Clock } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const basicFeatures = [
@@ -16,6 +17,64 @@ const completeFeatures = [
   'Agente IA para explicar conteúdos e tirar dúvidas',
 ];
 
+const CountdownTimer = () => {
+  const [time, setTime] = useState({
+    hours: 2,
+    minutes: 45,
+    seconds: 37
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        } else if (prev.hours > 0) {
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        } else {
+          return prev;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatNumber = (num: number) => num.toString().padStart(2, '0');
+
+  return (
+    <div className="mt-6 mb-2 mx-auto max-w-[280px]">
+      <div className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] rounded-lg p-[1px] shadow-lg relative overflow-hidden group">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+
+        <div className="bg-[#0f172a] rounded-[7px] p-2 flex flex-col items-center justify-center relative z-10">
+          <div className="flex items-center gap-1.5 mb-1">
+            <Clock className="w-3.5 h-3.5 text-[#FF7A3D] animate-pulse" />
+            <span className="text-[#FF7A3D] text-[10px] font-bold uppercase tracking-wider">Oferta Acabando</span>
+          </div>
+
+          <div className="flex items-center justify-center gap-1.5 text-white font-mono text-lg font-bold tracking-widest leading-none">
+            <div className="bg-[#1e293b] px-1.5 py-0.5 rounded text-[#FF7A3D] border border-[#1e3a8a] shadow-inner">
+              {formatNumber(time.hours)}
+            </div>
+            <span className="text-[#475569] text-sm">:</span>
+            <div className="bg-[#1e293b] px-1.5 py-0.5 rounded text-[#FF7A3D] border border-[#1e3a8a] shadow-inner">
+              {formatNumber(time.minutes)}
+            </div>
+            <span className="text-[#475569] text-sm">:</span>
+            <div className="bg-[#1e293b] px-1.5 py-0.5 rounded text-[#FF7A3D] border border-[#1e3a8a] shadow-inner min-w-[32px]">
+              {formatNumber(time.seconds)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 export const Pricing = () => {
   const { ref, isVisible } = useScrollReveal();
 
@@ -27,7 +86,7 @@ export const Pricing = () => {
             Escolha o Acesso Ideal para Tirar Sua CNH de Forma Rápida e Sem Burocracia
           </h2>
           <p className="text-lg md:text-xl text-[#2D7DD2] max-w-3xl mx-auto">
-            Os dois planos entregam tudo que você precisa. A diferença está no bônus exclusivo que facilitará seus estudos e acelerará seu aprendizado.
+            Os dois planos entregam tudo que você precisa, com acesso vitalício e imediato. A diferença está no bônus exclusivo que facilitará seus estudos e acelerará seu aprendizado.
           </p>
         </div>
 
@@ -64,6 +123,8 @@ export const Pricing = () => {
               MAIS VENDIDO
             </div>
 
+            <CountdownTimer />
+
             <h3 className="text-2xl font-bold text-[#1F2D3D] mb-2 mt-4">Plano Completo</h3>
             <div className="mb-6">
               <span className="text-4xl font-bold text-[#2D7DD2]">R$ 27,90</span>
@@ -96,7 +157,7 @@ export const Pricing = () => {
 
         <div className="text-center max-w-3xl mx-auto bg-[#F5F8FA] rounded-xl p-8">
           <p className="text-lg text-[#1F2D3D] leading-relaxed">
-            Uma autoescola tradicional cobra entre R$ 2.000 e R$ 3.500 pelo processo completo. Com o Protocolo CNH, você tem acesso a todo o conhecimento necessário por menos de R$ 30, e estuda no seu ritmo, quando e onde quiser e recebe aprendizados de como dirigir um carro.
+            Uma autoescola tradicional cobra entre R$ 2.000 e R$ 3.500 pelo processo completo, mas isso é coisa do passado. Com o Protocolo CNH, você tem acesso a todo o conhecimento necessário por menos de R$ 30, e estuda no seu ritmo, quando e onde quiser e recebe aprendizados de como dirigir um carro.
           </p>
         </div>
       </div>

@@ -59,15 +59,23 @@ export const Urgency = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <X className="w-5 h-5 text-[#FF6B6B] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#1F2D3D]">Não pretende reservar nem alguns minutos por dia para estudar</span>
+                  <span className="text-[#1F2D3D]">Não pretende estudar nem alguns minutos por dia</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <X className="w-5 h-5 text-[#FF6B6B] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#1F2D3D]">Prefere conteúdos soltos e desorganizados ao invés de um método claro</span>
+                  <span className="text-[#1F2D3D]">Prefere conteúdos soltos e desorganizados</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <X className="w-5 h-5 text-[#FF6B6B] flex-shrink-0 mt-0.5" />
                   <span className="text-[#1F2D3D]">Faz questão de seguir o processo tradicional</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <X className="w-5 h-5 text-[#FF6B6B] flex-shrink-0 mt-0.5" />
+                  <span className="text-[#1F2D3D]">Não gosta de materiais guiados</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <X className="w-5 h-5 text-[#FF6B6B] flex-shrink-0 mt-0.5" />
+                  <span className="text-[#1F2D3D]">Não vê necessidade de se preparar antes da prova</span>
                 </li>
               </ul>
             </div>

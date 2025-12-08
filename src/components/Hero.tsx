@@ -7,11 +7,11 @@ export const Hero = () => {
         <div className="space-y-8 max-w-4xl mx-auto">
           <div className="space-y-6 animate-fadeInUp text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1F2D3D] leading-tight">
-              VOCÊ NÃO PRECISA MAIS DE AUTOESCOLA! ADQUIRA TODO CONTEÚDO TEÓRICO E PRÁTICO PARA CONSEGUIR SUA CNH NA PALMA DA SUA MÃO
+              AUTOESCOLA FICOU PARA O PASSADO! ADQUIRA TODO CONTEÚDO TEÓRICO E PRÁTICO PARA FINALMENTE CONSEGUIR SUA CNH
             </h1>
 
             <p className="text-lg md:text-xl text-[#2D7DD2] leading-relaxed">
-              Todos os conteúdos da prova teórica destrinchados e um guia prático para sua primeira experiência ao volante. Um caminho simples e direto para quem quer conquistar a sua CNH sem dor de cabeça.
+              Com a nova resolução adotada pelo CONTRAN, você não precisa mais de uma autoescola para passar na sua CNH. Com isso, preparamos materiais com todos os conteúdos para a prova teórica destrinchados e um guia prático para sua primeira experiência ao volante. Um caminho simples e direto para quem quer conquistar a sua CNH economizando até mais que R$2.000
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export const Hero = () => {
 
           <div className="space-y-6 text-center">
             <button className="w-full md:w-auto bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-semibold text-lg px-8 py-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse">
-              QUERO CONQUISTAR MINHA CNH AGORA
+              QUERO CONQUISTAR MINHA CNH AGORA POR R$27,90
             </button>
 
             <p className="text-sm text-[#A7B2C2]">

@@ -58,7 +58,7 @@ export const BonusAI = () => {
 
             <div className="bg-[#F5F8FA] rounded-xl p-6 max-w-3xl">
               <p className="text-lg text-[#1F2D3D] font-semibold">
-                Esse bônus sozinho já valeria mais do que o valor do protocolo inteiro, mas hoje vem incluso sem custo adicional.
+                Esse bônus sozinho já valeria mais do que o valor do protocolo inteiro, mas hoje vem incluso com um valor simbólico de apenas R$27,90.
               </p>
             </div>
           </div>

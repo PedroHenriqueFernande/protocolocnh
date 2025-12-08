@@ -5,11 +5,11 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const faqs = [
   {
     question: '➤Isso funciona mesmo sem autoescola?',
-    answer: 'Sim. A nova lei permite tirar a CNH sem autoescola, desde que você estude e esteja preparado. O Protocolo CNH organiza esse caminho de forma simples e prática.',
+    answer: 'Sim, a nova resolução do Contran permite tirar a CNH sem autoescola, desde que você estude e esteja preparado. O Protocolo CNH organiza esse caminho de forma simples e prática.',
   },
   {
     question: '➤ Vou receber tudo na hora?',
-    answer: 'Sim. Assim que o pagamento é aprovado, o acesso chega imediatamente no seu e-mail.',
+    answer: 'Sim, assim que o pagamento é aprovado, o acesso chega imediatamente no seu e-mail.',
   },
   {
     question: '➤ É difícil estudar sozinho?',
@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     question: '➤ O Agente de IA ajuda de verdade?',
-    answer: 'Sim. Ele responde dúvidas sobre o conteúdo da prova, reforça explicações e acelera sua preparação. É como ter um mini-instrutor disponível 24h.',
+    answer: 'Sim, ele responde dúvidas sobre o conteúdo da prova, reforça explicações e acelera sua preparação. É como ter um mini-instrutor disponível 24h.',
   },
   {
     question: '➤ Serve para quem nunca dirigiu?',
-    answer: 'Sim. O guia prático mostra exatamente como dar seus primeiros passos no carro com segurança.',
+    answer: 'Sim, o guia prático mostra exatamente como dar seus primeiros passos no carro com segurança.',
   },
   {
     question: '➤ E se eu não gostar do conteúdo?',
@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     question: '➤ Funciona no celular?',
-    answer: 'Sim. Todos os materiais podem ser acessados do celular, tablet ou computador.',
+    answer: 'Sim, todos os materiais podem ser acessados do celular, tablet ou computador.',
   },
   {
     question: '➤ O suporte via WhatsApp é rápido?',
-    answer: 'Sim. Você recebe atendimento direto para dúvidas sobre os materiais.',
+    answer: 'Sim, você recebe atendimento direto para dúvidas sobre os materiais.',
   },
 ];
 
