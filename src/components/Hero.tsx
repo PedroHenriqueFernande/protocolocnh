@@ -7,7 +7,7 @@ export const Hero = () => {
         <div className="space-y-8 max-w-4xl mx-auto">
           <div className="space-y-6 animate-fadeInUp text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1F2D3D] leading-tight">
-              Agora Você Pode Tirar Sua CNH Sem Burocracia com Este Protocolo que Ensina Exatamente Como Passar na Prova e Dirigir com Segurança.
+              VOCÊ NÃO PRECISA MAIS DE AUTOESCOLA! ADQUIRA TODO CONTEÚDO TEÓRICO E PRÁTICO PARA CONSEGUIR SUA CNH NA PALMA DA SUA MÃO
             </h1>
 
             <p className="text-lg md:text-xl text-[#2D7DD2] leading-relaxed">
@@ -60,7 +60,7 @@ export const Hero = () => {
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
                 <Bot className="w-8 h-8 text-[#4FA3FF]" />
-                <span className="text-xs text-[#1F2D3D] font-medium">Agente IA</span>
+                <span className="text-xs text-[#1F2D3D] font-medium">Estude com Agente IA</span>
               </div>
             </div>
           </div>

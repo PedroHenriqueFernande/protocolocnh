@@ -5,7 +5,6 @@ const basicFeatures = [
   'Aulas Teóricas',
   'Mapas Mentais',
   'Audiobook',
-  'Vídeos (IA)',
   'Guia de Direção',
   'Testes Interativos',
   'Slides',
@@ -14,7 +13,7 @@ const basicFeatures = [
 
 const completeFeatures = [
   ...basicFeatures,
-  'Agente IA Exclusivo',
+  'Agente IA para explicar conteúdos e tirar dúvidas',
 ];
 
 export const Pricing = () => {
@@ -25,10 +24,10 @@ export const Pricing = () => {
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2D3D] mb-4">
-            Escolha o Plano Ideal Para Tirar Sua CNH de Forma Rápida e Sem Burocracia
+            Escolha o Acesso Ideal para Tirar Sua CNH de Forma Rápida e Sem Burocracia
           </h2>
           <p className="text-lg md:text-xl text-[#2D7DD2] max-w-3xl mx-auto">
-            Os dois planos entregam tudo que você precisa. A diferença está no suporte e no bônus exclusivo.
+            Os dois planos entregam tudo que você precisa. A diferença está no bônus exclusivo que facilitará seus estudos e acelerará seu aprendizado.
           </p>
         </div>
 
@@ -72,7 +71,7 @@ export const Pricing = () => {
 
             <div className="bg-[#E8F3FF] rounded-lg p-3 mb-6">
               <p className="text-[#2D7DD2] font-semibold text-center">
-                Inclui tudo do Básico + Agente IA
+                Inclui tudo do Básico + Agente IA Exclusivo
               </p>
             </div>
 
@@ -97,7 +96,7 @@ export const Pricing = () => {
 
         <div className="text-center max-w-3xl mx-auto bg-[#F5F8FA] rounded-xl p-8">
           <p className="text-lg text-[#1F2D3D] leading-relaxed">
-            <span className="font-bold">Compare:</span> Uma autoescola tradicional cobra entre R$ 2.000 e R$ 3.500 por um curso completo. Com o Protocolo CNH, você tem acesso a todo o conhecimento necessário por menos de R$ 30, e estuda no seu ritmo, quando e onde quiser.
+            Uma autoescola tradicional cobra entre R$ 2.000 e R$ 3.500 pelo processo completo. Com o Protocolo CNH, você tem acesso a todo o conhecimento necessário por menos de R$ 30, e estuda no seu ritmo, quando e onde quiser e recebe aprendizados de como dirigir um carro.
           </p>
         </div>
       </div>

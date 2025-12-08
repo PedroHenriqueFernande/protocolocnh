@@ -6,8 +6,9 @@ const features = [
   'Responde dúvidas imediatamente',
   'Acelera revisão antes da prova',
   'Ajuda a corrigir erros comuns',
-  'Funciona 24h no celular',
-  'É como ter um mini-instrutor particular',
+  'Funciona 24h',
+  'Utilize em qualquer lugar',
+  'É como ter um instrutor particular',
 ];
 
 export const BonusAI = () => {

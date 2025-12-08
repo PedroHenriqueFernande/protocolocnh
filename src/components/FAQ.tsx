@@ -4,35 +4,35 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const faqs = [
   {
-    question: '➤ 1. Isso funciona mesmo sem autoescola?',
+    question: '➤Isso funciona mesmo sem autoescola?',
     answer: 'Sim. A nova lei permite tirar a CNH sem autoescola, desde que você estude e esteja preparado. O Protocolo CNH organiza esse caminho de forma simples e prática.',
   },
   {
-    question: '➤ 2. Vou receber tudo na hora?',
+    question: '➤ Vou receber tudo na hora?',
     answer: 'Sim. Assim que o pagamento é aprovado, o acesso chega imediatamente no seu e-mail.',
   },
   {
-    question: '➤ 3. É difícil estudar sozinho?',
+    question: '➤ É difícil estudar sozinho?',
     answer: 'Não, desde que você tenha um método claro. O protocolo já te dá o passo a passo para estudar e revisar rápido, sem confusão.',
   },
   {
-    question: '➤ 4. O Agente de IA ajuda de verdade?',
+    question: '➤ O Agente de IA ajuda de verdade?',
     answer: 'Sim. Ele responde dúvidas sobre o conteúdo da prova, reforça explicações e acelera sua preparação. É como ter um mini-instrutor disponível 24h.',
   },
   {
-    question: '➤ 5. Serve para quem nunca dirigiu?',
+    question: '➤ Serve para quem nunca dirigiu?',
     answer: 'Sim. O guia prático mostra exatamente como dar seus primeiros passos no carro com segurança.',
   },
   {
-    question: '➤ 6. E se eu não gostar do conteúdo?',
+    question: '➤ E se eu não gostar do conteúdo?',
     answer: 'Você tem 30 dias de garantia total para pedir reembolso, sem justificativa.',
   },
   {
-    question: '➤ 7. Funciona no celular?',
+    question: '➤ Funciona no celular?',
     answer: 'Sim. Todos os materiais podem ser acessados do celular, tablet ou computador.',
   },
   {
-    question: '➤ 8. O suporte via WhatsApp é rápido?',
+    question: '➤ O suporte via WhatsApp é rápido?',
     answer: 'Sim. Você recebe atendimento direto para dúvidas sobre os materiais.',
   },
 ];
