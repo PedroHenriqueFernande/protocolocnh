@@ -1,6 +1,7 @@
 import { Hero } from './components/Hero';
 import { DemoCarousel } from './components/DemoCarousel';
 import { Benefits } from './components/Benefits';
+import { IdealForYou } from './components/IdealForYou';
 import { Urgency } from './components/Urgency';
 import { Deliverables } from './components/Deliverables';
 import { BonusAI } from './components/BonusAI';
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <DemoCarousel />
       <Benefits />
+      <IdealForYou />
       <Urgency />
       <Deliverables />
       <BonusAI />

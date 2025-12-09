@@ -15,6 +15,7 @@ const basicFeatures = [
 const completeFeatures = [
   ...basicFeatures,
   'Agente IA para explicar conteúdos e tirar dúvidas',
+  'Acesso às futuras atualizações para moto',
 ];
 
 const CountdownTimer = () => {
@@ -24,7 +25,15 @@ const CountdownTimer = () => {
     seconds: 37
   });
 
+  const [dateStr, setDateStr] = useState('');
+
   useEffect(() => {
+    // Set dynamic date
+    const today = new Date();
+    const day = today.getDate().toString().padStart(2, '0');
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    setDateStr(`${day}/${month}`);
+
     const timer = setInterval(() => {
       setTime(prev => {
         if (prev.seconds > 0) {
@@ -45,26 +54,29 @@ const CountdownTimer = () => {
   const formatNumber = (num: number) => num.toString().padStart(2, '0');
 
   return (
-    <div className="mt-6 mb-2 mx-auto max-w-[280px]">
-      <div className="bg-gradient-to-r from-[#1e3a8a] to-[#172554] rounded-lg p-[1px] shadow-lg relative overflow-hidden group">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+    <div className="mt-6 mb-4 mx-auto w-full max-w-[340px]">
+      <div className="bg-gradient-to-b from-[#2D7DD2] via-[#1e3a8a] to-[#0f172a] rounded-xl p-[2px] shadow-xl relative overflow-hidden group">
+        {/* Metallic Shine Effect */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-20 pointer-events-none" />
 
-        <div className="bg-[#0f172a] rounded-[7px] p-2 flex flex-col items-center justify-center relative z-10">
-          <div className="flex items-center gap-1.5 mb-1">
-            <Clock className="w-3.5 h-3.5 text-[#FF7A3D] animate-pulse" />
-            <span className="text-[#FF7A3D] text-[10px] font-bold uppercase tracking-wider">Oferta Acabando</span>
+        <div className="bg-gradient-to-b from-[#172554] to-[#0f172a] rounded-[10px] p-4 flex flex-col items-center justify-center relative z-10 border border-[#2D7DD2]/30">
+          <div className="flex items-center gap-2 mb-3">
+            <Clock className="w-5 h-5 text-[#FF7A3D] animate-pulse" />
+            <span className="text-[#FF7A3D] text-xs md:text-sm font-bold uppercase tracking-wider">
+              Essa Oferta Acaba Dia {dateStr}
+            </span>
           </div>
 
-          <div className="flex items-center justify-center gap-1.5 text-white font-mono text-lg font-bold tracking-widest leading-none">
-            <div className="bg-[#1e293b] px-1.5 py-0.5 rounded text-[#FF7A3D] border border-[#1e3a8a] shadow-inner">
+          <div className="flex items-center justify-center gap-2 text-white font-mono text-2xl md:text-3xl font-bold tracking-widest leading-none w-full">
+            <div className="bg-[#0f172a] px-3 py-2 rounded-lg text-[#FF7A3D] border border-[#2D7DD2]/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] min-w-[60px] flex justify-center backdrop-blur-sm">
               {formatNumber(time.hours)}
             </div>
-            <span className="text-[#475569] text-sm">:</span>
-            <div className="bg-[#1e293b] px-1.5 py-0.5 rounded text-[#FF7A3D] border border-[#1e3a8a] shadow-inner">
+            <span className="text-[#475569] text-xl mb-1">:</span>
+            <div className="bg-[#0f172a] px-3 py-2 rounded-lg text-[#FF7A3D] border border-[#2D7DD2]/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] min-w-[60px] flex justify-center backdrop-blur-sm">
               {formatNumber(time.minutes)}
             </div>
-            <span className="text-[#475569] text-sm">:</span>
-            <div className="bg-[#1e293b] px-1.5 py-0.5 rounded text-[#FF7A3D] border border-[#1e3a8a] shadow-inner min-w-[32px]">
+            <span className="text-[#475569] text-xl mb-1">:</span>
+            <div className="bg-[#0f172a] px-3 py-2 rounded-lg text-[#FF7A3D] border border-[#2D7DD2]/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] min-w-[60px] flex justify-center backdrop-blur-sm">
               {formatNumber(time.seconds)}
             </div>
           </div>
@@ -113,7 +125,7 @@ export const Pricing = () => {
             </button>
 
             <p className="text-center text-sm text-[#A7B2C2] mt-4">
-              Acesso imediato à versão essencial
+              Acesso imediato à versão essencial + 30 dias de garantia
             </p>
           </div>
 
@@ -132,7 +144,7 @@ export const Pricing = () => {
 
             <div className="bg-[#E8F3FF] rounded-lg p-3 mb-6">
               <p className="text-[#2D7DD2] font-semibold text-center">
-                Inclui tudo do Básico + Agente IA Exclusivo
+                Inclui tudo do Básico <br />+ Agente IA Exclusivo + 30 dias de garantia
               </p>
             </div>
 
@@ -150,7 +162,7 @@ export const Pricing = () => {
             </button>
 
             <p className="text-center text-sm text-[#A7B2C2] mt-4">
-              Acesso imediato + Bônus Exclusivo
+              Acesso imediato + Bônus Exclusivo + 30 dias de garantia
             </p>
           </div>
         </div>

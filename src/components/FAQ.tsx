@@ -84,9 +84,9 @@ export const FAQ = () => {
               Garantia de 30 Dias Para Testar Sem Risco
             </h2>
             <p className="text-lg text-[#2D7DD2] leading-relaxed">
-              30 dias para testar tudo.
-              <br />
-              Se não gostar, devolvemos 100% do seu dinheiro.
+              Durante 30 dias, você pode acessar tudo, estudar, usar o suporte e testar cada material do protocolo.
+              Se em qualquer momento você sentir que este não é o método ideal para você, devolvemos 100% do valor.
+              Essa garantia existe porque sabemos que o conteúdo funciona e você merece investir com tranquilidade.
             </p>
           </div>
         </div>

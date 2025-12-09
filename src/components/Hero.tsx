@@ -11,7 +11,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-[#2D7DD2] leading-relaxed">
-              Com a nova resolução adotada pelo CONTRAN, você não precisa mais de uma autoescola para passar na sua CNH. Com isso, preparamos materiais com todos os conteúdos para a prova teórica destrinchados e um guia prático para sua primeira experiência ao volante. Um caminho simples e direto para quem quer conquistar a sua CNH economizando até mais que R$2.000
+              Com a nova resolução adotada pelo CONTRAN, você não precisa mais de uma autoescola para fazer as provas do DETRAN e adquirir sua CNH. Com isso, preparamos materiais com todos os conteúdos para a prova teórica destrinchados e um guia prático para sua primeira experiência ao volante. Um caminho simples e direto para quem quer conquistar a sua CNH economizando até mais que R$2.000
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export const Hero = () => {
             </button>
 
             <p className="text-sm text-[#A7B2C2]">
-              Acesso imediato ao Protocolo + bônus essenciais
+              Acesso imediato ao Protocolo + bônus essenciais + 30 dias de garantia
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">

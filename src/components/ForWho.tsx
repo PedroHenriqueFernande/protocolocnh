@@ -39,7 +39,7 @@ export const ForWho = () => {
             Ideal Para Você Que Quer Tirar a CNH Sem Complicação
           </h2>
           <p className="text-lg md:text-xl text-[#2D7DD2] max-w-3xl mx-auto">
-            Se alguma dessas situações te descreve, este protocolo foi feito para você:
+            Se alguma dessas situações faz parte da sua realidade, você vai se identificar com este protocolo:
           </p>
         </div>
 
@@ -47,9 +47,8 @@ export const ForWho = () => {
           {pains.map((pain, index) => (
             <div
               key={index}
-              className={`flex items-start gap-3 bg-white rounded-lg p-4 border border-[#E6EEF5] shadow-sm transition-all duration-500 ${
-                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-              }`}
+              className={`flex items-start gap-3 bg-white rounded-lg p-4 border border-[#E6EEF5] shadow-sm transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <X className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
@@ -60,9 +59,8 @@ export const ForWho = () => {
 
         <div ref={ref2} className="grid md:grid-cols-2 gap-8">
           <div
-            className={`bg-white rounded-2xl border-2 border-[#4FA3FF] p-8 shadow-lg transition-all duration-700 ${
-              isVisible2 ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+            className={`bg-white rounded-2xl border-2 border-[#4FA3FF] p-8 shadow-lg transition-all duration-700 ${isVisible2 ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
             <h3 className="text-2xl font-bold text-[#1F2D3D] mb-6 flex items-center gap-2">
               <span className="text-2xl">👉</span> Esse método é para quem:
@@ -78,9 +76,8 @@ export const ForWho = () => {
           </div>
 
           <div
-            className={`bg-white rounded-2xl border-2 border-[#A7B2C2] p-8 shadow-lg transition-all duration-700 ${
-              isVisible2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
+            className={`bg-white rounded-2xl border-2 border-[#A7B2C2] p-8 shadow-lg transition-all duration-700 ${isVisible2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`}
           >
             <h3 className="text-2xl font-bold text-[#1F2D3D] mb-6 flex items-center gap-2">
               <span className="text-2xl">🚫</span> Esse método não é para quem:
