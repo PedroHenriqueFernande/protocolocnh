@@ -62,7 +62,7 @@ export const Testimonials = () => {
     const { ref, isVisible } = useScrollReveal();
 
     return (
-        <section className="bg-[#F5F8FA] py-16 px-4 md:py-24">
+        <section className="bg-[#F5F8FA] py-16 px-2 sm:px-4 md:py-24">
             <div className="max-w-7xl mx-auto">
                 <div
                     ref={ref}

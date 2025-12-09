@@ -61,7 +61,7 @@ export const Benefits = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="bg-white py-16 px-4 md:py-24">
+    <section className="bg-white py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2D3D] mb-4">

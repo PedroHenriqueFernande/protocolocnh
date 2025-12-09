@@ -2,16 +2,27 @@ import { Shield, Zap, MessageCircle, Bot, Play } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="bg-[#F5F8FA] py-16 px-4 md:py-24">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative overflow-hidden bg-[#F5F8FA] pt-0 pb-16 px-2 sm:px-4 md:pb-24">
+      {/* Hero Image with Gradient Mask */}
+      <img
+        src="/Hero.jpg"
+        alt="Hero Background"
+        className="w-full h-auto object-cover md:max-h-[800px] mx-auto block relative z-0"
+        style={{
+          maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto relative z-10 -mt-8 md:-mt-12">
         <div className="space-y-8 max-w-4xl mx-auto">
-          <div className="space-y-6 animate-fadeInUp text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1F2D3D] leading-tight">
-              AUTOESCOLA FICOU PARA O PASSADO! ADQUIRA TODO CONTEÚDO TEÓRICO E PRÁTICO PARA FINALMENTE CONSEGUIR SUA CNH
+          <div className="space-y-6 animate-fadeInUp text-center px-2">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#1F2D3D] leading-tight break-words">
+              AUTOESCOLA FICOU PARA O PASSADO!
             </h1>
 
             <p className="text-lg md:text-xl text-[#2D7DD2] leading-relaxed">
-              Com a nova resolução adotada pelo CONTRAN, você não precisa mais de uma autoescola para fazer as provas do DETRAN e adquirir sua CNH. Com isso, preparamos materiais com todos os conteúdos para a prova teórica destrinchados e um guia prático para sua primeira experiência ao volante. Um caminho simples e direto para quem quer conquistar a sua CNH economizando até mais que R$2.000
+              Com a nova resolução adotada pelo CONTRAN, você não precisa mais de uma autoescola para fazer as provas e adquirir sua CNH. Com isso, preparamos materiais com todos os conteúdos para a prova teórica destrinchados e um guia prático para sua experiência ao volante ser a mais tranquila possível. Um caminho simples e direto para quem quer conquistar a sua CNH economizando até mais que R$2.000
             </p>
           </div>
 

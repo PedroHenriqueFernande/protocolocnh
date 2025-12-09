@@ -14,7 +14,7 @@ const basicFeatures = [
 
 const completeFeatures = [
   ...basicFeatures,
-  'Agente IA para explicar conteúdos e tirar dúvidas',
+  'Chat IA treinado para te instruir e ajudar nas dúvidas',
   'Acesso às futuras atualizações para moto',
 ];
 
@@ -91,7 +91,7 @@ export const Pricing = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="bg-white py-16 px-4 md:py-24">
+    <section className="bg-white py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2D3D] mb-4">
@@ -102,7 +102,7 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12 px-4">
           <div className="bg-[#F5F8FA] rounded-2xl border border-[#4FA3FF] p-8 shadow-lg transition-all duration-300 hover:shadow-xl">
             <h3 className="text-2xl font-bold text-[#1F2D3D] mb-2">Plano Básico</h3>
             <div className="mb-6">

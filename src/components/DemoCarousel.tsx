@@ -52,7 +52,7 @@ export const DemoCarousel = () => {
   const Icon = slides[currentSlide].icon;
 
   return (
-    <section ref={ref} className="bg-white py-16 px-4 md:py-24">
+    <section ref={ref} className="bg-white py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2D3D] mb-4">
@@ -63,10 +63,36 @@ export const DemoCarousel = () => {
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="bg-[#F5F8FA] rounded-2xl border border-[#D9E2EC] shadow-lg p-8 md:p-12">
-            <div className="flex flex-col items-center text-center space-y-6">
-              <div className="w-24 h-24 bg-gradient-to-br from-[#4FA3FF] to-[#2D7DD2] rounded-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
+        <div className="relative max-w-4xl mx-auto mt-48 md:mt-64">
+          {/* Floating Image Section for Slides 0 and 1 */}
+          {(currentSlide === 0 || currentSlide === 1) && (
+            <div
+              className="absolute -top-40 md:-top-48 left-1/2 -translate-x-1/2 w-[110%] md:w-[115%] h-56 md:h-64 z-20 transition-transform duration-300 cursor-pointer hover:scale-[1.02] active:scale-105"
+            >
+              {currentSlide === 0 && (
+                <img
+                  src="/guia-habilitacao.png"
+                  alt="Guia Rápido"
+                  className="w-full h-full object-cover rounded-xl shadow-2xl"
+                />
+              )}
+              {currentSlide === 1 && (
+                <div className="w-full h-64 relative p-4 pb-0 bg-white rounded-xl">
+                  <img
+                    src="/mapas-mentais.png"
+                    alt="Mapas Mentais"
+                    className="w-full h-full object-contain rounded-xl shadow-sm"
+                  />
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="bg-[#F5F8FA] rounded-2xl border border-[#D9E2EC] shadow-lg relative overflow-visible flex flex-col z-10">
+
+            {/* Content Section - Added significant top padding for slides with images to prevent overlap */}
+            <div className={`p-8 md:p-12 flex flex-col items-center text-center space-y-6 ${(currentSlide === 0 || currentSlide === 1) ? 'pt-32 md:pt-40' : ''}`}>
+              <div className="w-24 h-24 bg-gradient-to-br from-[#4FA3FF] to-[#2D7DD2] rounded-2xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-md">
                 <Icon className="w-12 h-12 text-white" />
               </div>
 
@@ -82,14 +108,14 @@ export const DemoCarousel = () => {
 
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#F5F8FA] transition-all hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#F5F8FA] transition-all hover:scale-110 z-30"
           >
             <ChevronLeft className="w-6 h-6 text-[#2D7DD2]" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#F5F8FA] transition-all hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#F5F8FA] transition-all hover:scale-110 z-30"
           >
             <ChevronRight className="w-6 h-6 text-[#2D7DD2]" />
           </button>

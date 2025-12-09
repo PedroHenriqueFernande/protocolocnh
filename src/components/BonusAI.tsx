@@ -15,7 +15,7 @@ export const BonusAI = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="bg-[#E8F3FF] py-16 px-4 md:py-24">
+    <section className="bg-[#E8F3FF] py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-5xl mx-auto">
         <div
           ref={ref}

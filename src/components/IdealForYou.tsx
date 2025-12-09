@@ -30,7 +30,7 @@ export const IdealForYou = () => {
     const { ref, isVisible } = useScrollReveal();
 
     return (
-        <section className="bg-white py-16 px-4 md:py-24">
+        <section className="bg-white py-16 px-2 sm:px-4 md:py-24">
             <div className="max-w-7xl mx-auto">
                 <div
                     ref={ref}

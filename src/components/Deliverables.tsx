@@ -52,7 +52,7 @@ export const Deliverables = () => {
   const Icon = deliverables[currentSlide].icon;
 
   return (
-    <section ref={ref} className="bg-[#F5F8FA] py-16 px-4 md:py-24">
+    <section ref={ref} className="bg-[#F5F8FA] py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2D3D] mb-4">
@@ -102,9 +102,8 @@ export const Deliverables = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'w-8 bg-[#2D7DD2]' : 'w-2 bg-[#D9E2EC] hover:bg-[#4FA3FF]'
-              }`}
+              className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-8 bg-[#2D7DD2]' : 'w-2 bg-[#D9E2EC] hover:bg-[#4FA3FF]'
+                }`}
             />
           ))}
         </div>

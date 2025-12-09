@@ -5,7 +5,7 @@ export const Urgency = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="bg-white py-16 px-4 md:py-24">
+    <section className="bg-white py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2D3D] mb-6">
@@ -13,7 +13,7 @@ export const Urgency = () => {
           </h2>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             {/* Esse método é para quem */}
-            <div className="bg-white rounded-2xl border-2 border-[#4FA3FF] p-6 shadow-lg">
+            <div className="bg-white rounded-2xl border-2 border-[#4FA3FF] p-6 shadow-lg text-left">
               <div className="flex items-start gap-3 mb-4">
                 <ThumbsUp className="w-6 h-6 text-[#FFD700] flex-shrink-0 mt-1" />
                 <h3 className="text-xl font-bold text-[#1F2D3D]">
@@ -49,7 +49,7 @@ export const Urgency = () => {
             </div>
 
             {/* Esse método não é para quem */}
-            <div className="bg-white rounded-2xl border-2 border-[#FF6B6B] p-6 shadow-lg">
+            <div className="bg-white rounded-2xl border-2 border-[#FF6B6B] p-6 shadow-lg text-left">
               <div className="flex items-start gap-3 mb-4">
                 <Ban className="w-6 h-6 text-[#FF6B6B] flex-shrink-0 mt-1" />
                 <h3 className="text-xl font-bold text-[#1F2D3D]">
