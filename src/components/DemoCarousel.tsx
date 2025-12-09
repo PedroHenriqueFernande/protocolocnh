@@ -81,11 +81,11 @@ export const DemoCarousel = () => {
                 </div>
               )}
               {currentSlide === 2 && (
-                <div className="w-full h-full relative rounded-xl shadow-2xl overflow-hidden">
+                <div className="w-full h-full relative rounded-xl shadow-2xl overflow-hidden bg-white">
                   <img
                     src="/Guia%20CNH%20Sem%20Autoescola.png"
                     alt="Audiobooks"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-bottom"
                   />
                 </div>
               )}

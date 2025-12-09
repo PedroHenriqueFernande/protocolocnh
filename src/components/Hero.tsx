@@ -2,12 +2,12 @@ import { Shield, Zap, MessageCircle, Bot, Play } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#F5F8FA] pt-0 pb-16 px-2 sm:px-4 md:pb-24">
+    <section className="relative overflow-hidden bg-[#F5F8FA] pt-0 pb-16 md:pb-24">
       {/* Hero Image with Gradient Mask */}
       <img
         src="/Hero.jpg"
         alt="Hero Background"
-        className="w-full h-auto object-cover md:max-h-[800px] mx-auto block relative z-0"
+        className="w-full h-full object-cover mx-auto block relative z-0"
         style={{
           maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
@@ -48,9 +48,12 @@ export const Hero = () => {
           </div>
 
           <div className="space-y-6 text-center">
-            <button className="w-full md:w-auto bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-semibold text-lg px-8 py-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse">
+            <a
+              href="#bonus-ai"
+              className="w-full md:w-auto bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-semibold text-lg px-8 py-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse text-center inline-block"
+            >
               QUERO CONQUISTAR MINHA CNH AGORA POR R$27,90
-            </button>
+            </a>
 
             <p className="text-sm text-[#A7B2C2]">
               Acesso imediato ao Protocolo + bônus essenciais + 30 dias de garantia

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Bot, Check } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -13,9 +14,31 @@ const features = [
 
 export const BonusAI = () => {
   const { ref, isVisible } = useScrollReveal();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Play only when the video enters the viewport
+          void video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="bg-[#E8F3FF] py-16 px-2 sm:px-4 md:py-24">
+    <section id="bonus-ai" className="bg-[#E8F3FF] py-16 px-2 sm:px-4 md:py-24">
       <div className="max-w-5xl mx-auto">
         <div
           ref={ref}
@@ -41,7 +64,16 @@ export const BonusAI = () => {
               </p>
             </div>
 
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-none">
+              <video
+                src="/4444444444.mp4"
+                ref={videoRef}
+                className="w-full h-[420px] rounded-2xl shadow-xl object-cover block"
+                preload="metadata"
+                muted
+                loop
+                playsInline
+              />
               <h3 className="text-xl font-bold text-[#1F2D3D] mb-6 flex items-center justify-center gap-2">
                 <Bot className="w-6 h-6 text-[#4FA3FF]" />
                 O que esse Agente faz por você:
