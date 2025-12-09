@@ -161,6 +161,8 @@ export const DemoCarousel = () => {
           </button>
         </div>
 
+
+
         <div className="flex justify-center gap-2 mt-8">
           {slides.map((_, index) => (
             <button
@@ -175,7 +177,14 @@ export const DemoCarousel = () => {
         <p className="text-center text-lg text-[#1F2D3D] mt-12 font-medium max-w-3xl mx-auto">
           Tudo preparado para você aprender rápido, sem confusão, sem burocracia e sem depender da autoescola.
         </p>
+
+        <div className="mt-8 text-center px-4">
+          <button className="bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-bold text-xl px-8 py-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-pulse w-full md:w-auto leading-tight">
+            QUERO GARANTIR<br className="block sm:hidden" /> MINHA APROVAÇÃO
+          </button>
+        </div>
       </div>
-    </section>
+    </section >
   );
 };
+

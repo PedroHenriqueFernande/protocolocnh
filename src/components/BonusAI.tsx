@@ -68,7 +68,7 @@ export const BonusAI = () => {
               <video
                 src="/4444444444.mp4"
                 ref={videoRef}
-                className="w-full h-[420px] rounded-2xl shadow-xl object-cover block"
+                className="w-full max-w-[320px] mx-auto rounded-3xl shadow-xl h-auto block"
                 preload="metadata"
                 muted
                 loop
@@ -92,6 +92,12 @@ export const BonusAI = () => {
               <p className="text-lg text-[#1F2D3D] font-semibold">
                 Esse bônus sozinho já valeria mais do que o valor do protocolo inteiro, mas hoje vem incluso com um valor simbólico de apenas R$27,90.
               </p>
+            </div>
+
+            <div className="mt-8 w-full">
+              <button className="w-full bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-bold text-xl px-6 py-5 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-pulse">
+                QUERO GARANTIR MEU AGENTE DE IA
+              </button>
             </div>
           </div>
         </div>

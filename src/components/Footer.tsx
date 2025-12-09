@@ -7,6 +7,13 @@ export const Footer = () => {
         <div className="text-center space-y-6">
           <h3 className="text-2xl font-bold">Protocolo CNH: Guia Teórico + Prático Completo</h3>
 
+          {/* Main CTA Button */}
+          <div className="mb-6">
+            <button className="bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-pulse w-full md:w-auto">
+              QUERO GARANTIR MINHA APROVAÇÃO
+            </button>
+          </div>
+
           {/* WhatsApp Support Button - Highlighted */}
           <div className="mb-6">
             <a

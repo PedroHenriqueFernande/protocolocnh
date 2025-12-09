@@ -108,6 +108,7 @@ export const Deliverables = () => {
           ))}
         </div>
       </div>
+
     </section>
   );
 };

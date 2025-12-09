@@ -50,6 +50,12 @@ export const IdealForYou = () => {
                         <PainPointCard key={index} point={point} index={index} />
                     ))}
                 </div>
+
+                <div className="mt-12 text-center">
+                    <button className="bg-[#FF7A3D] hover:bg-[#FF6A2D] text-white font-bold text-xl px-8 py-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-pulse w-full md:w-auto">
+                        QUERO GARANTIR MINHA APROVAÇÃO
+                    </button>
+                </div>
             </div>
         </section>
     );
