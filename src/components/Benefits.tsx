@@ -68,7 +68,7 @@ export const Benefits = () => {
             Por Que o Protocolo CNH É o Caminho Mais Simples Para Você Ser Aprovado
           </h2>
           <p className="text-lg md:text-xl text-[#2D7DD2] max-w-3xl mx-auto">
-            O Protocolo CNH organiza tudo para acelerar sua aprovação e te ensinar o básico para dirigir com segurança.
+            Nossos materiais de estudo são projetados para direcionar sua aprovação na prova teórica, e te ensinar a dirigir para a prática.
           </p>
         </div>
 

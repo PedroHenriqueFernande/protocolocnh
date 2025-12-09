@@ -11,9 +11,12 @@ import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 
+import { StickyPromoBar } from './components/StickyPromoBar';
+
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <StickyPromoBar />
       <Hero />
       <DemoCarousel />
       <Benefits />

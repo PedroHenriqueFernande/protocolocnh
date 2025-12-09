@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { Check, Star, Clock } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const basicFeatures = [
@@ -18,73 +17,7 @@ const completeFeatures = [
   'Acesso às futuras atualizações para moto',
 ];
 
-const CountdownTimer = () => {
-  const [time, setTime] = useState({
-    hours: 2,
-    minutes: 45,
-    seconds: 37
-  });
 
-  const [dateStr, setDateStr] = useState('');
-
-  useEffect(() => {
-    // Set dynamic date
-    const today = new Date();
-    const day = today.getDate().toString().padStart(2, '0');
-    const month = (today.getMonth() + 1).toString().padStart(2, '0');
-    setDateStr(`${day}/${month}`);
-
-    const timer = setInterval(() => {
-      setTime(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else {
-          return prev;
-        }
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatNumber = (num: number) => num.toString().padStart(2, '0');
-
-  return (
-    <div className="mt-6 mb-4 mx-auto w-full max-w-[340px]">
-      <div className="bg-gradient-to-b from-[#2D7DD2] via-[#1e3a8a] to-[#0f172a] rounded-xl p-[2px] shadow-xl relative overflow-hidden group">
-        {/* Metallic Shine Effect */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-20 pointer-events-none" />
-
-        <div className="bg-gradient-to-b from-[#172554] to-[#0f172a] rounded-[10px] p-4 flex flex-col items-center justify-center relative z-10 border border-[#2D7DD2]/30">
-          <div className="flex items-center gap-2 mb-3">
-            <Clock className="w-5 h-5 text-[#FF7A3D] animate-pulse" />
-            <span className="text-[#FF7A3D] text-xs md:text-sm font-bold uppercase tracking-wider">
-              Essa Oferta Acaba Dia {dateStr}
-            </span>
-          </div>
-
-          <div className="flex items-center justify-center gap-2 text-white font-mono text-2xl md:text-3xl font-bold tracking-widest leading-none w-full">
-            <div className="bg-[#0f172a] px-3 py-2 rounded-lg text-[#FF7A3D] border border-[#2D7DD2]/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] min-w-[60px] flex justify-center backdrop-blur-sm">
-              {formatNumber(time.hours)}
-            </div>
-            <span className="text-[#475569] text-xl mb-1">:</span>
-            <div className="bg-[#0f172a] px-3 py-2 rounded-lg text-[#FF7A3D] border border-[#2D7DD2]/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] min-w-[60px] flex justify-center backdrop-blur-sm">
-              {formatNumber(time.minutes)}
-            </div>
-            <span className="text-[#475569] text-xl mb-1">:</span>
-            <div className="bg-[#0f172a] px-3 py-2 rounded-lg text-[#FF7A3D] border border-[#2D7DD2]/50 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] min-w-[60px] flex justify-center backdrop-blur-sm">
-              {formatNumber(time.seconds)}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 
 export const Pricing = () => {
@@ -106,7 +39,10 @@ export const Pricing = () => {
           <div className="bg-[#F5F8FA] rounded-2xl border border-[#4FA3FF] p-8 shadow-lg transition-all duration-300 hover:shadow-xl">
             <h3 className="text-2xl font-bold text-[#1F2D3D] mb-2">Plano Básico</h3>
             <div className="mb-6">
-              <span className="text-4xl font-bold text-[#2D7DD2]">R$ 19,90</span>
+              <span className="block text-red-600 text-lg font-bold line-through mb-1">De R$ 49,90</span>
+              <span className="text-4xl font-bold text-green-600 inline-block md:text-4xl">
+                <span className="text-black text-3xl">por apenas</span> <span className="inline-block animate-pulse-scale">R$ 19,90</span>
+              </span>
             </div>
 
             <p className="text-[#2D7DD2] mb-6">Você recebe:</p>
@@ -135,11 +71,12 @@ export const Pricing = () => {
               MAIS VENDIDO
             </div>
 
-            <CountdownTimer />
-
-            <h3 className="text-2xl font-bold text-[#1F2D3D] mb-2 mt-4">Plano Completo</h3>
+            <h3 className="text-2xl font-bold text-[#1F2D3D] mb-2 mt-12">Plano Completo</h3>
             <div className="mb-6">
-              <span className="text-4xl font-bold text-[#2D7DD2]">R$ 27,90</span>
+              <span className="block text-red-600 text-lg font-bold line-through mb-1">De R$ 99,90</span>
+              <span className="text-4xl font-bold text-green-600 inline-block md:text-4xl">
+                <span className="text-black text-3xl">por apenas</span> <span className="inline-block animate-pulse-scale">R$ 27,90</span>
+              </span>
             </div>
 
             <div className="bg-[#E8F3FF] rounded-lg p-3 mb-6">

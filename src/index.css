@@ -11,7 +11,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Poppins', sans-serif;
   }
 }
@@ -22,6 +27,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -29,19 +35,25 @@
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-6px);
     }
   }
 
   @keyframes pulse-subtle {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: scale(1);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     }
+
     50% {
       transform: scale(1.02);
       box-shadow: 0 20px 40px -10px rgba(255, 122, 61, 0.3);
@@ -58,6 +70,24 @@
 
   .animate-pulse-subtle {
     animation: pulse-subtle 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-scale {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+      /* Softer scale */
+    }
+  }
+
+  .animate-pulse-scale {
+    animation: pulse-scale 3s ease-in-out infinite;
+    /* Slower duration */
   }
 
   .animation-delay-200 {
