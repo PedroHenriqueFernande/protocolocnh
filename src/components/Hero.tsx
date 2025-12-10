@@ -1,4 +1,4 @@
-import { Shield, Zap, MessageCircle, Bot, Play } from 'lucide-react';
+import { Shield, Zap, MessageCircle, Bot } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -24,27 +24,6 @@ export const Hero = () => {
             <p className="text-lg md:text-xl text-[#2D7DD2] leading-relaxed">
               Com a nova resolução adotada pelo CONTRAN, você não precisa mais de uma autoescola para fazer as provas e adquirir sua CNH. Com isso, preparamos materiais com todos os conteúdos para a prova teórica destrinchados e um guia prático para sua experiência ao volante ser a mais tranquila possível. Um caminho simples e direto para quem quer conquistar a sua CNH economizando até mais que R$2.000
             </p>
-          </div>
-
-          <div className="animate-fadeInUp animation-delay-200 flex flex-col items-center space-y-4">
-            {/* Blue pulsating header */}
-            <div className="w-full max-w-[280px] bg-gradient-to-r from-[#4FA3FF] to-[#2D7DD2] rounded-lg py-3 px-6 animate-pulse">
-              <p className="text-center text-white font-semibold text-sm">
-                Assista ao vídeo e veja como funciona
-              </p>
-            </div>
-
-            {/* VSL Container */}
-            <div className="bg-white rounded-2xl shadow-2xl p-4 border border-[#D9E2EC] w-full max-w-[280px]">
-              <div className="w-full" style={{ aspectRatio: '9/16' }}>
-                <div className="w-full h-full bg-gradient-to-br from-[#4FA3FF] to-[#2D7DD2] rounded-xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <button className="relative z-10 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform duration-300">
-                    <Play className="w-10 h-10 text-[#2D7DD2] ml-1" fill="currentColor" />
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="space-y-6 text-center">
